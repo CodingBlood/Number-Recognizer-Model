@@ -2,37 +2,37 @@
 # ----------------------------------------------------HANDWRITING RECOGNITION MODEL-----------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------------------------
 # LOADING AND VISUALISING DATASET
-from keras.datasets import mnist
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
-print(x_train.shape)
-for i in range(0, 6):
-    random_number = np.random.randint(0, len(x_train))
-    cv2.imshow(str(i), x_train[random_number])
-    cv2.waitKey()
-cv2.destroyAllWindows()
-
-plt.subplot(331)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.subplot(332)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.subplot(333)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.subplot(334)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.subplot(335)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.subplot(336)
-random_number = np.random.randint(0, len(x_train))
-plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
-plt.show()
+# from keras.datasets import mnist
+# import numpy as np
+# import cv2
+# import matplotlib.pyplot as plt
+# (x_train, y_train), (x_test, y_test) = mnist.load_data()
+# print(x_train.shape)
+# for i in range(0, 6):
+#     random_number = np.random.randint(0, len(x_train))
+#     cv2.imshow(str(i), x_train[random_number])
+#     cv2.waitKey()
+# cv2.destroyAllWindows()
+#
+# plt.subplot(331)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.subplot(332)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.subplot(333)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.subplot(334)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.subplot(335)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.subplot(336)
+# random_number = np.random.randint(0, len(x_train))
+# plt.imshow(x_train[random_number], cmap=plt.get_cmap('gray'))
+# plt.show()
 
 # GETTING DATA IN  SHAPE TO TRAIN THE MODEL IN KERAS I.E. (NO OF SAMPLES, ROWS, COLS, DEPTH) FOR EG-> (6000, 28, 28, 1)
 from keras.datasets import mnist
@@ -74,11 +74,11 @@ print(str(num_pixels) + "<-pixels----classes->" + str(num_classes))
 
 #BUILDING AND COMPILING THE MODEL
 
-import  keras
-from keras.datasets import mnist
+# import  keras
+# from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
-from keras import backend as K
+# from keras import backend as K
 from  keras.optimizers import SGD
 
 model = Sequential()
@@ -104,7 +104,7 @@ print("test loss: " + str(score[0]))
 print("test accuracy: " + str(score[1]))
 
 # SAVING YOUR MODEL AT CUSTOM LOCATION
-model.save('./HANDWRITINGRECOGNITION.h5') #<====lOCATION FOR FILE TO BE SAVED
+model.save('./HANDWRITINGRECOGNITION.h5') #<====LOCATION FOR FILE TO BE SAVED
 print("MODEL SAVED")
 # LOADING YOUR MODEL FROM CUSTOM LOCATION
 # from keras.models import load_model
